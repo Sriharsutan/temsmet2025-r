@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { PDFViewer, Document, Page, Text, StyleSheet } from '@react-pdf/renderer';
+import { HeadingBar } from './SmallComps';
 
 // Create styles for the PDF content
 const styles = StyleSheet.create({
@@ -18,7 +19,12 @@ const styles = StyleSheet.create({
 
 const Sponsorship = () => {
   return (
-    <div className="flex items-center justify-center min-h-screen bg-gray-100">
+    <div className="sm:ml-32 sm:mr-32 sm:mt-10 sm:mb-10 p-6">
+      <div className="text-left mb-6">
+        <h1 className="font-bold sm:text-3xl text-2xl text-sky-700">Sponsorship Details:</h1>
+        <HeadingBar/>
+      </div>
+
       <iframe
         src="/Temsmet2025_Sponsorship_Brochure.pdf"
         className="w-full h-[800px] border border-gray-300 shadow-lg"
